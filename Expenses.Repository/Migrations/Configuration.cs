@@ -28,14 +28,19 @@ namespace Expenses.Repository.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            SeedUsers(context);
         }
 
         private void SeedUsers(RepositoryContext context)
         {
+            var dbset = context.Set<User>();
 
             var newUser = new User() { Name = "Rafa³", Surname = "Chodzid³o", Age = 25, Login = "raflotraflo", Password = "test"};
-            context.Set<User>().AddOrUpdate(newUser);
+            dbset.AddOrUpdate(newUser);
 
+            newUser = new User() { Name = "Rafa³2", Surname = "Chodzid³o2", Age = 22, Login = "raflotraflo2", Password = "test2" };
+            dbset.AddOrUpdate(newUser);
 
             context.SaveChanges();
         }

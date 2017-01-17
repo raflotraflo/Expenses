@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations;
 
 namespace Expenses.Domain.Models
 {
     public class User
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }
+        //[Required]
         public string Login { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }

@@ -12,9 +12,9 @@ namespace Expenses.Repository.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Login = c.String(),
+                        Login = c.String(nullable: false, maxLength: 30),
                         Password = c.String(),
-                        Name = c.String(),
+                        Name = c.String(nullable: false),
                         Surname = c.String(),
                         Age = c.Int(),
                     })
