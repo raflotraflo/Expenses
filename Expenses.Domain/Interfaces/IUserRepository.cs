@@ -7,14 +7,8 @@ using Expenses.Domain.Models;
 
 namespace Expenses.Domain.Interfaces
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository<User>
     {
-        IQueryable<User> GetAllUsers();
-        User GetUserById(int id);
-        void AddUser(User user);
-        void UpdateUser(User user);
-        void DeleteUser(int id);
-
-        void SaveChanges();
+        
     }
 }

@@ -8,44 +8,11 @@ using Expenses.Domain.Models;
 
 namespace Expenses.Repository
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : RepositoryBase<User>, IUserRepository
     {
-        private IRepositoryContext _db;
-
-        public UserRepository(IRepositoryContext db)
+        public UserRepository(IRepositoryContext context) : base (context)
         {
-            _db = db;
-        }
-
-        public void AddUser(User user)
-        {
-            _db.User.Add(user);
-        }
-
-        public void DeleteUser(int id)
-        {
-            var toDelete = _db.User.Find(id);
-            _db.User.Remove(toDelete);
-        }
-
-        public IQueryable<User> GetAllUsers()
-        {
-            return _db.User.AsNoTracking();
-        }
-
-        public User GetUserById(int id)
-        {
-            return _db.User.Find(id);
-        }
-
-        public void SaveChanges()
-        {
-            _db.SaveChanges();
-        }
-
-        public void UpdateUser(User user)
-        {
-            _db.Entry(user).State = System.Data.Entity.EntityState.Modified;
+            
         }
     }
 }

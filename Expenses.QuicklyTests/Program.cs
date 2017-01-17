@@ -19,7 +19,7 @@ namespace Expenses.QuicklyTests
 
                 IUserRepository userRepository = new UserRepository(db);
 
-                var allUsers = userRepository.GetAllUsers().ToList();
+                var allUsers = userRepository.All().ToList();
             }
             catch (Exception ex)
             {
