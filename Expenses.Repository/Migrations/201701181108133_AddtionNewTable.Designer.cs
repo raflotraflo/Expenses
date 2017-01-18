@@ -7,13 +7,13 @@ namespace Expenses.Repository.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitMigration : IMigrationMetadata
+    public sealed partial class AddtionNewTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddtionNewTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201701171521017_InitMigration"; }
+            get { return "201701181108133_AddtionNewTable"; }
         }
         
         string IMigrationMetadata.Source
