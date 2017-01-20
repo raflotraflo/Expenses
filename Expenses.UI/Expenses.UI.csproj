@@ -99,9 +99,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Settings.cs" />
+    <Compile Include="ViewModel\CategoryViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\RootViewModel.cs" />
+    <Compile Include="ViewModel\ShoppingViewModel.cs" />
     <Compile Include="ViewModel\ThemeViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
@@ -196,6 +199,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="expenses.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Expenses.Domain\Expenses.Domain.csproj">
+      <Project>{a84e724c-9200-432e-98f5-1245f47edaa0}</Project>
+      <Name>Expenses.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
